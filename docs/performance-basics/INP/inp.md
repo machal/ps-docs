@@ -4,8 +4,7 @@ authors: [zuzana]
 tags: [metriky, core-web-vitals]
 ---
 
-Metrika Interaction to Next Paint (INP)
-=======================================
+# Metrika Interaction to Next Paint (INP)
 
 ![](inp-bg.png)
 
@@ -15,8 +14,7 @@ Interaction to Next Paint je přísnější a lépe odráží zkušenost uži
 
 Optimalizace této metriky může zabrat i několik měsíců práce, proto je nejlepší čas se jí zabývat právě teď.
 
-Co je metrika INP?
-------------------
+## Co je metrika INP?
 
 INP odpovídá na otázku: Jak rychle to reaguje?
 
@@ -50,15 +48,13 @@ Pusťte si záznam Zuzčiny přednášky o metrice INP z FrontKonu 2023:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/b9XIeTLZO9I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Jak se metrika INP počítá?
---------------------------
+## Jak se metrika INP počítá?
 
 Nyní několik zajímavých detailů k výpočtu metriky. INP se měří na základě všech provedených interakcí na stránce. Interakce s nejhorším dosaženým měřením se pak započítává jako hodnota metriky. Mezi interakce nepočítáme scroll ani najetí kurzorem (hover), ale bere se odpověď klikání nebo zadávání přes klávesnici.
 
 V případě velkého počtu interakcí se počítá jinak, na každých 50 interakcí na stránce je ignorována jedna nejvyšší hodnota. Google se tak snaží zpřesnit metriku a odstranit vliv různých náhodných záseků u webových aplikací, kde se hodně kliká, což mohou být různé herní rozhraní.
 
-Měříme INP
-----------
+## Měříme INP
 
 Jak jsme vysvětlili výše, zdrojem hodnot pro metriku INP je [Chrome UX Report](https://www.vzhurudolu.cz/prirucka/chrome-ux-report) (CrUX). Ten obsahuje jak data pro celou doménu, tak pro jednotlivé URL. Pro pohodlnější práci využijte některý z dostupných nástrojů, který s daty z CrUX umí pracovat a zobrazit je. Jedná se například o náš tester PageSpeed.cz nebo PageSpeed Insights od Googlu.
 
@@ -81,8 +77,7 @@ Pokud je pro vás omezení na uživatele Google Chrome příliš limitující
 
 Další možností jsou syntetická měření, která si můžete zajistit pomocí nástrojů jako je [SpeedCurve](https://www.speedcurve.com/), [Google Lighthouse](https://www.vzhurudolu.cz/prirucka/lighthouse), [WebPageTest](https://www.webpagetest.org/) a podobně. Zde ale dostanete jen hodnoty podobných metrik (jako JS Long Tasks), nikoliv INP samotné, protože tu lze dostat jen od uživatelů.
 
-Mám problém s INP, co teď?
---------------------------
+## Mám problém s INP, co teď?
 
 Prošli jste si data z reportu CrUX ud uživatelů, mrkli jste se do Google Search Console a vidíte zde hlášené skupiny URL? Nyní je nejvyšší čas najít problém. Tedy přejít do testovacích nástrojů, případně testovat v prohlížeči (což děláme my) a vytipovat konkrétní problematická místa.
 
@@ -110,8 +105,7 @@ _Performance tab - timeline_
 
 Záložka „Main" pak reprezentuje spuštěné skripty a metody, které nám odpovídají na otázku „Co se to tam děje?"
 
-Jaké jsou časté chyby a možnosti optimalizace?
-----------------------------------------------
+## Jaké jsou časté chyby a možnosti optimalizace?
 
 Interaction to Next Paint je hlavně javascriptová metrika, ale dost věcí se dá vyřešit i úpravou UI.
 

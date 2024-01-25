@@ -4,8 +4,7 @@ authors: [zuzana]
 tags: [metriky, core-web-vitals]
 ---
 
-Metrika Largest Contentful Paint (LCP)
-======================================
+# Metrika Largest Contentful Paint (LCP)
 
 ![Article](metrika-lcp-001.png)
 
@@ -18,15 +17,13 @@ Svět metriky Largest Contentful Paint (LCP) by se dal přirovnat k adrenali
 - Jak a kde ji doporučujeme měřit?
 - Jaké jsou časté chyby a možnosti optimalizace?
 
-Seznamte se s metrikou LCP
---------------------------
+## Seznamte se s metrikou LCP
 
 Metrika LCP měří dobu, po které na stránce zobrazí největší element. To pomáhá uživatelům vyhodnotit užitečnost stránky.
 
 Tato metrika je součástí [Core Web Vitals](https://www.vzhurudolu.cz/prirucka/web-vitals), používaných pro měření rychlosti načítání webových stránek. Metriky Core Web Vitals jsou také jedním ze signálů zohledňovaných Googlem při řazení výsledků výhledávání.
 
-Držte LCP pod 2,5 sekundy
--------------------------
+## Držte LCP pod 2,5 sekundy
 
 Pokud chcete mít Largest Contentful Paint v zeleném vyhovujícím pásmu, hodnota musí být do 2,5 sekundy. LCP mezi 2,5 až 4 sekundy je v oranžovém pásmu a vyžaduje úpravy. Čas metriky LCP nad 4 sekundy Google hodnotí jako nevyhovující.
 
@@ -66,13 +63,11 @@ LCP elementem naopak nemohou být následující prvky:
 ![](metrika-lcp-003.png)  
 _Základem je identifikovat „LCP element". Jen pozor, na v různých rozlišeních může jít o různý prvek._
 
-Jak se LCP element vyhodnocuje?
--------------------------------
+## Jak se LCP element vyhodnocuje?
 
 Pro správné vyhodnocení a optimalizace je potřeba pochopit, jak se metrika LCP počítá. U LCP elementu se obvykle vyhodnotí jeho velikost viditelná na obrazovce uživatele. V úvahu se neberou ořezané části, části skryté pomocí `overflow:hidden`, ani vlastností `padding`, `margin`, `border` a další. Pokud chcete do detailů vyhodnocení LCP zabrousit více, je tu na toto téma fajn článek na [web.dev](https://web.dev/lcp/#how-is-an-elements-size-determined).
 
-Měříme LCP na vlastním webu
----------------------------
+## Měříme LCP na vlastním webu
 
 Spolehlivným zdrojem dat o metrikách Core Web Vitals jsou datasety [Chrome UX Reportu](https://www.vzhurudolu.cz/prirucka/chrome-ux-report) (CrUX). S těmito daty můžete pracovat jak pro celou doménu, tak pro jednotlivá URL.
 
@@ -86,8 +81,7 @@ Pokud je pro vás omezení na uživatele prohlížeče Chrome příliš limit
 
 Další možností jsou syntetická měření, která si můžete zajistit pomocí nástrojů jako je SpeedCurve, Google Lighthouse, WebPageTest a podobně.
 
-Chyby a možnosti optimalizace LCP
----------------------------------
+## Chyby a možnosti optimalizace LCP
 
 Metrika LCP je poměrně komplexní. Je potřeba si uvědomit, že ji může ovlivnit spousta faktorů. V první řadě se jedná o zdroje kritické pro první vykreslení:
 
@@ -135,8 +129,7 @@ Pokud zjistíte, že jako LCP element se na stránce vyhodnotí textový prve
 <link rel="preload" href="font-1.woff2" as="font" type="font/woff2" crossorigin>
 ```
 
-Co byste si měli ohledně LCP zapamatovat
-----------------------------------------
+## Co byste si měli ohledně LCP zapamatovat
 
 - Largest Contentful Paint (LCP) je metrika měřící dobu, kdy se na stránce zobrazí největší vizuální prvek.
 - Doporučené hodnoty pro LCP jsou do 2,5 sekundy, 2,5 - 4 sekundy vyžaduje úpravy a nad 4 sekundy je LCP nevyhovující.
